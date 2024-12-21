@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  String? labelText;
-  bool? obscureText;
-  Widget? suffixIcon;
-  String? Function(String?)? validator;
-  void Function(String)? onChanged;
-  CustomTextFormField(
+  final String? labelText;
+  final bool? obscureText;
+  final Widget? suffixIcon;
+  final String? Function(String?)? validator;
+  final void Function(String)? onChanged;
+  const CustomTextFormField(
       {required this.labelText,
       this.obscureText,
       this.suffixIcon,

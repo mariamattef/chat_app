@@ -2,13 +2,13 @@ import 'package:chat_app/constant.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  String text;
-  void Function()? onPressed;
-  CustomButton({required this.text, this.onPressed, super.key});
+  final String text;
+  final void Function()? onPressed;
+  const CustomButton({required this.text, this.onPressed, super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 60,
       child: ElevatedButton(
@@ -18,7 +18,7 @@ class CustomButton extends StatelessWidget {
           ),
         ),
         onPressed: onPressed,
-        child: Text('$text',
+        child: Text(text,
             style: const TextStyle(
               fontSize: 23,
               color: kPrimaryColor,

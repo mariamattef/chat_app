@@ -14,11 +14,6 @@ class ChatBuble extends StatelessWidget {
         padding:
             const EdgeInsets.only(left: 15, top: 18, bottom: 18, right: 15),
         decoration: const BoxDecoration(
-          // gradient: LinearGradient(
-          //   begin: Alignment.topLeft,
-          //   end: Alignment.bottomRight,
-          //   colors: [kPrimaryColor, Colors.blue],
-          // ),
           color: kPrimaryColor,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(16),
@@ -29,8 +24,8 @@ class ChatBuble extends StatelessWidget {
         ),
         margin: const EdgeInsets.all(15),
         child: Text(
-          message.message,
-          style: TextStyle(color: Colors.white),
+          message.message ?? '',
+          style: const TextStyle(color: Colors.white),
         ),
       ),
     );
@@ -49,11 +44,6 @@ class ChatBubleForFriend extends StatelessWidget {
         padding:
             const EdgeInsets.only(left: 15, top: 18, bottom: 18, right: 15),
         decoration: const BoxDecoration(
-          // gradient: LinearGradient(
-          //   begin: Alignment.topLeft,
-          //   end: Alignment.bottomRight,
-          //   colors: [kPrimaryColor, Colors.blue],
-          // ),
           color: Color(0xff006D84),
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(16),
@@ -64,8 +54,8 @@ class ChatBubleForFriend extends StatelessWidget {
         ),
         margin: const EdgeInsets.all(15),
         child: Text(
-          message.message,
-          style: TextStyle(color: Colors.white),
+          message.message ?? '',
+          style: const TextStyle(color: Colors.white),
         ),
       ),
     );
